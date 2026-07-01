@@ -121,7 +121,13 @@ Raw third-party datasets are not redistributed in this public-safe package. Row-
 
 # Code Availability
 
-Analysis code is provided in the accompanying public-safe reproducibility package, including src/msbp_tg, scripts, tests, environment files, metadata files, and public-safe derived summary tables. A DOI-resolved release should be generated through GitHub and Zenodo before ChemRxiv posting; after release, this statement should be replaced with the resolved software citation.
+Analysis code and the public-safe reproducibility package are archived on GitHub and Zenodo.
+
+GitHub repository: https://github.com/htetkokokonaing-dev/msbp-tg
+
+Zenodo DOI: https://doi.org/10.5281/zenodo.21100020
+
+The repository includes src/msbp_tg, scripts, tests, environment files, metadata files, aggregate validation summaries, figures, and public-safe derived tables. Raw third-party datasets and row-level third-party-derived SMILES/Tg records are not redistributed.
 
 # Funding
 

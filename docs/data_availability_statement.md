@@ -4,7 +4,9 @@ Raw third-party datasets are not redistributed in this public-safe package. Sour
 
 The public package includes derived source-level summary tables, figure assets, manuscript materials, and reproducibility code where redistribution is compatible with public release. Users should reacquire the original source files from their official repositories or data pages and rerun the scripts locally to regenerate validation feature tables.
 
-After GitHub/Zenodo release, add the repository URL and Zenodo DOI to this statement.
+Repository URL: https://github.com/htetkokokonaing-dev/msbp-tg
+
+Zenodo DOI: https://doi.org/10.5281/zenodo.21100020
 
 ##  data-rights note
 

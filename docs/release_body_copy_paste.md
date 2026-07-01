@@ -11,4 +11,4 @@ Key points:
 - Raw third-party datasets and row-level third-party-derived SMILES/Tg tables are not redistributed.
 - Zenodo metadata is stored in `.zenodo.json`; `CITATION.cff` is included for software citation metadata.
 
-After this release is archived by Zenodo, insert the real DOI into the manuscript, README, citation metadata, and final release metadata before creating `final DOI-bearing release`.
+Archived Zenodo DOI: https://doi.org/10.5281/zenodo.21100020. The DOI has been inserted into the DOI-ready manuscript and citation metadata.

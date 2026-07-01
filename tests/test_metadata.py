@@ -4,6 +4,10 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+DOI = "10.5281/zenodo.21100020"
+GITHUB = "https://github.com/htetkokokonaing-dev/msbp-tg"
+VERSION = "v1.0.1-preprint"
+
 
 def test_zenodo_metadata_filename_and_core_fields() -> None:
     zenodo = ROOT / ".zenodo.json"
@@ -13,16 +17,21 @@ def test_zenodo_metadata_filename_and_core_fields() -> None:
     assert data["license"] == "mit"
     assert data["language"] == "eng"
     assert data["upload_type"] == "software"
-    assert 'version' not in data
-    assert data.get("related_identifiers", []) == []
+    assert data["version"] == VERSION
+    related = data.get("related_identifiers", [])
+    assert related, "post-DOI metadata should include resolved related identifiers"
+    assert any(item.get("identifier") == GITHUB for item in related)
 
-def test_citation_cff_software_type_and_no_fake_identifier() -> None:
+
+def test_citation_cff_software_type_and_resolved_identifier() -> None:
     cff = (ROOT / "CITATION.cff").read_text()
     assert "type: software" in cff
     assert "REPOSITORY_URL_TO_BE_INSERTED" not in cff
     assert "DOI_TO_BE_INSERTED" not in cff
-    assert "doi:" not in cff.lower()
-    assert "repository-code:" not in cff
+    assert f'doi: "{DOI}"' in cff
+    assert f'repository-code: "{GITHUB}"' in cff
+    assert f'url: "{GITHUB}"' in cff
+
 
 def test_metadata_docs_use_dot_zenodo_filename() -> None:
     docs = [

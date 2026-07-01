@@ -5,7 +5,7 @@ After Zenodo issues the DOI:
 1. Copy the DOI from the Zenodo record.
 2. Update `README.md` with the repository URL and DOI.
 3. Update `CITATION.cff` with the DOI and repository URL.
-4. Update `.zenodo.json` related identifiers if appropriate.
+4. `.zenodo.json` related identifiers updated with GitHub repository and release URL. Zenodo DOI: https://doi.org/10.5281/zenodo.21100020.
 5. Update the manuscript Data and Code Availability section with:
    - GitHub repository URL
    - Zenodo DOI

@@ -18,3 +18,9 @@ Raw third-party datasets and row-level third-party-derived SMILES/Tg tables are 
 
 Create a public GitHub repository, create a preprint-candidate release, archive it with Zenodo, then insert the real GitHub URL and Zenodo DOI into the manuscript, README, citation metadata, and release metadata before ChemRxiv posting.
 - Added conservative practical design-workflow implications to the manuscript without changing code, data, or validation results.
+
+
+## DOI-resolved archive
+
+Zenodo DOI: https://doi.org/10.5281/zenodo.21100020
+GitHub release: https://github.com/htetkokokonaing-dev/msbp-tg/releases/tag/v1.0.1-preprint

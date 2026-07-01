@@ -10,4 +10,4 @@ Recommended release metadata before DOI exists:
 - Language: eng
 - Creators: Naing, Htet Ko Ko; ORCID 0009-0000-6140-0495; Independent Researcher
 
-Do not add placeholder DOI values to `.zenodo.json`. After GitHub and Zenodo release creation, add real persistent identifiers in one controlled metadata-update pass.
+Do not add placeholder DOI values to `.zenodo.json`. Real persistent identifiers have now been resolved in this DOI-bearing update: https://doi.org/10.5281/zenodo.21100020.

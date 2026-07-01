@@ -2,7 +2,13 @@
 
 ## Current status
 
-This public-safe preprint package intentionally does not contain a real GitHub URL or Zenodo DOI yet. Do not add fake DOI or URL values.
+This public-safe preprint package now has resolved release identifiers.
+
+GitHub repository: https://github.com/htetkokokonaing-dev/msbp-tg
+
+GitHub release: https://github.com/htetkokokonaing-dev/msbp-tg/releases/tag/v1.0.1-preprint
+
+Zenodo DOI: https://doi.org/10.5281/zenodo.21100020
 
 ## Recommended release sequence
 
@@ -10,7 +16,7 @@ This public-safe preprint package intentionally does not contain a real GitHub U
 2. Push this repository after local tests and public-safety checks pass.
 3. Create a preprint-candidate GitHub release with tag `preprint-candidate`.
 4. Enable Zenodo GitHub integration and archive that release.
-5. Copy the Zenodo DOI into:
+5. The Zenodo DOI has been copied into:
    - `README.md`
    - `CITATION.cff`
    - `.zenodo.json` related identifiers if appropriate

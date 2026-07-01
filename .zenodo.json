@@ -20,7 +20,19 @@
     "reproducibility"
   ],
   "access_right": "open",
-  "related_identifiers": [],
-  "notes": "Preprint software-release metadata. The MIT license covers original code and documentation only; third-party data retain their original terms and are not redistributed. Add GitHub release URL and Zenodo DOI after the first public release; related_identifiers is intentionally empty until persistent identifiers exist.",
-  "language": "eng"
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/htetkokokonaing-dev/msbp-tg",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://github.com/htetkokokonaing-dev/msbp-tg/releases/tag/v1.0.1-preprint",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ],
+  "notes": "Preprint software-release metadata. The MIT license covers original code and documentation only; third-party data retain their original terms and are not redistributed. Archived release DOI: https://doi.org/10.5281/zenodo.21100020.",
+  "language": "eng",
+  "version": "v1.0.1-preprint"
 }

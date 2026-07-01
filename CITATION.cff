@@ -1,14 +1,18 @@
 cff-version: 1.2.0
-message: "If you use this repository, please cite it as below. Add repository-code and DOI after the first GitHub/Zenodo release."
+message: "If you use this repository, please cite the archived Zenodo release."
 type: software
 title: "Mobility Suppression Boundary Principle for Polymer Glass Transition Temperature"
 authors:
   - family-names: "Naing"
     given-names: "Htet Ko Ko"
     orcid: "https://orcid.org/0009-0000-6140-0495"
-date-released: "2026-06-30"
+version: "v1.0.1-preprint"
+date-released: "2026-07-01"
 license: "MIT"
-abstract: "Public-safe reproducibility package for MSBP-Tg, a candidate boundary-level explanation of polymer glass-transition temperature variation within comparable chemistry-size fibers. MSBP density is exactly the sign reversal of rotatable-bond density. Raw and row-level third-party SMILES/Tg data are not redistributed."
+doi: "10.5281/zenodo.21100020"
+url: "https://github.com/htetkokokonaing-dev/msbp-tg"
+repository-code: "https://github.com/htetkokokonaing-dev/msbp-tg"
+abstract: "Public-safe reproducibility package for MSBP-Tg, a boundary-level explanation of polymer glass-transition temperature variation within comparable chemistry-size fibers. MSBP density is exactly the sign reversal of rotatable-bond density. Raw and row-level third-party SMILES/Tg data are not redistributed."
 keywords:
   - polymer
   - glass transition temperature

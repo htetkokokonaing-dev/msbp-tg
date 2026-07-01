@@ -7,4 +7,4 @@ Use generic release names until the GitHub repository and Zenodo DOI exist:
 - Preprint-candidate release tag: `preprint-candidate`
 - Final DOI-bearing release tag: `final-release`
 
-After DOI creation, replace deferred placeholders with the real GitHub URL and Zenodo DOI, then re-render the manuscript PDF before ChemRxiv posting.
+DOI creation complete. GitHub URL: https://github.com/htetkokokonaing-dev/msbp-tg. Zenodo DOI: https://doi.org/10.5281/zenodo.21100020. Use the DOI-bearing manuscript PDF for ChemRxiv posting.
