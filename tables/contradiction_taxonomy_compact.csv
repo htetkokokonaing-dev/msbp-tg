@@ -1,0 +1,12 @@
+Source,Mechanism family,n,Contradictions,Rate
+Stage 10 tsaicying,aromatic/rigid,489,16,0.033
+Stage 10 tsaicying,flexible segment,171,13,0.076
+Stage 10 tsaicying,other/mixed context,10,1,0.100
+Stage 10 tsaicying,polar/heteroatom,27,3,0.111
+Stage 10 tsaicying,siloxane-like,42,3,0.071
+Stage 11 NeurIPS,aromatic/rigid,71,5,0.070
+Stage 11 NeurIPS,flexible segment,151,15,0.099
+Stage 11 NeurIPS,other/mixed context,1,0,0.000
+Stage 11 NeurIPS,polar/heteroatom,13,4,0.308
+Stage 11 NeurIPS,siloxane-like,25,5,0.200
+Stage 13 Leeds PAEK,aromatic/rigid,78,2,0.026

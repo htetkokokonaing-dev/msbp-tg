@@ -1,0 +1,4 @@
+source,included_as,reason
+Leeds PAEK Tg supporting data,primary Stage 13 source-3 candidate,Tg+SMILES repeat-unit list; exact row-key overlap excluded
+ViditAg Tg_vs_SMILES_extracted_from_pdf,secondary proxy only,monomer SMILES rather than polymer repeat unit
+RAK2315 Glass Transition Temperature Tg Predictor,excluded/offtarget check,"small-molecule Tg dataset, not polymer Tg boundary target"

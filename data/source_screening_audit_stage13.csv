@@ -1,0 +1,4 @@
+source_dataset,raw_rows,tg_rows,rdkit_valid,unique_row_keys,exact_rowkey_overlap_rows,any_component_overlap_rows,usable_new_rows,usable_new_unique
+Leeds_PAEK_Tg,146,146,146,98,20,70,126,78
+RAK2315_small_molecule_Tg_offtarget,671,635,635,368,0,0,635,368
+ViditAg_monomer_PPD_proxy,902,902,896,848,0,0,896,848

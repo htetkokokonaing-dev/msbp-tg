@@ -1,0 +1,12 @@
+mechanism_family,n,strong_n,contradictions,source,contradiction_rate_among_all
+aromatic/rigid backbone,489,219,16,Stage 10: tsaicying novel Tg subset,0.032719836400818
+high rotatable-density side-chain/flexible segment,171,108,13,Stage 10: tsaicying novel Tg subset,0.0760233918128654
+other/mixed context,10,4,1,Stage 10: tsaicying novel Tg subset,0.1
+polar/heteroatom context,27,21,3,Stage 10: tsaicying novel Tg subset,0.1111111111111111
+siloxane/silicon-like flexibility,42,19,3,Stage 10: tsaicying novel Tg subset,0.0714285714285714
+aromatic/rigid backbone,71,36,5,Stage 11: NeurIPS released Tg-known test,0.0704225352112676
+high rotatable-density side-chain/flexible segment,151,73,15,Stage 11: NeurIPS released Tg-known test,0.0993377483443708
+other/mixed context,1,0,0,Stage 11: NeurIPS released Tg-known test,0.0
+polar/heteroatom context,13,10,4,Stage 11: NeurIPS released Tg-known test,0.3076923076923077
+siloxane/silicon-like flexibility,25,13,5,Stage 11: NeurIPS released Tg-known test,0.2
+aromatic/rigid backbone,78,40,2,Stage 13: Leeds PAEK novel subset,0.0256410256410256

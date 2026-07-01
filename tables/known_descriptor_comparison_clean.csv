@@ -1,0 +1,16 @@
+source,descriptor,column,within_fiber_rho,abs_rho,n
+Stage 10: tsaicying novel Tg subset,rot/heavy = -MSBP density,rot_per_heavy,-0.7447871523592736,0.7447871523592736,739
+Stage 10: tsaicying novel Tg subset,ring density,rings_per_heavy,0.6600124562662174,0.6600124562662174,739
+Stage 10: tsaicying novel Tg subset,aromatic ring density,arom_per_heavy,0.6043150288439589,0.6043150288439589,739
+Stage 10: tsaicying novel Tg subset,heteroatom density,hetero_per_heavy,0.0428226481382323,0.0428226481382323,739
+Stage 10: tsaicying novel Tg subset,heavy atoms,heavy_atoms,0.0329743608869707,0.0329743608869707,739
+Stage 11: NeurIPS released Tg-known test,rot/heavy = -MSBP density,rot_per_heavy,-0.5509848772226069,0.5509848772226069,261
+Stage 11: NeurIPS released Tg-known test,ring density,rings_per_heavy,0.5173351802381433,0.5173351802381433,261
+Stage 11: NeurIPS released Tg-known test,aromatic ring density,arom_per_heavy,0.4992889235097612,0.4992889235097612,261
+Stage 11: NeurIPS released Tg-known test,heteroatom density,hetero_per_heavy,0.0231614627175516,0.0231614627175516,261
+Stage 11: NeurIPS released Tg-known test,heavy atoms,heavy_atoms,0.0285964468168074,0.0285964468168074,261
+Stage 13: Leeds PAEK novel subset,rot/heavy = -MSBP density,rot_per_heavy,-0.8284126078896,0.8284126078896,78
+Stage 13: Leeds PAEK novel subset,ring density,rings_per_heavy,0.5062470010696583,0.5062470010696583,78
+Stage 13: Leeds PAEK novel subset,aromatic ring density,arom_per_heavy,0.5062470010696583,0.5062470010696583,78
+Stage 13: Leeds PAEK novel subset,heteroatom density,hetero_per_heavy,-0.3223303142222993,0.3223303142222993,78
+Stage 13: Leeds PAEK novel subset,heavy atoms,heavy_atoms,-0.1876989720983506,0.1876989720983506,78

@@ -1,0 +1,4 @@
+source_dataset,delta_MSBP_minus_family_size_R2,generic_minus_MSBP_R2,MSBP_retained_fraction_of_generic_gain
+NeurIPS_public_Tg_known_novel,0.28528538862232833,0.149739206652431,0.6557914005807959
+NeurIPS_private_Tg_known_novel,0.43732013732794894,-0.004897383108214193,1.0113254519111767
+NeurIPS_public_private_combined_Tg_known_novel,0.29610454167706374,0.0374248663947514,0.8877914046287243

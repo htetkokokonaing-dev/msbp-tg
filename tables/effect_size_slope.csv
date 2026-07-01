@@ -1,0 +1,4 @@
+source,n,OLS_slope_C_per_unit_MSBP_density_residual,axis_resid_min,axis_resid_max
+Stage 10: tsaicying novel Tg subset,739,411.42090326778094,-0.6379461133077129,0.3563383838383838
+Stage 11: NeurIPS released Tg-known test,261,407.0617398433944,-0.3625188450735628,0.3342754467754467
+Stage 13: Leeds PAEK novel subset,78,1252.166787378011,-0.0564118380825847,0.0518120125832078

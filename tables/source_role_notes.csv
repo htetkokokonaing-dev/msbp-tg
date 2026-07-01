@@ -1,0 +1,4 @@
+source,role,interpretation_note
+Stage 10: tsaicying novel Tg subset,Broad post-lock public Tg subset,Broadest chemical diversity in this manuscript.
+Stage 11: NeurIPS released Tg-known test,Released benchmark-style source,Directional support; entropy separation is weaker and smaller than broad source.
+Stage 13: Leeds PAEK novel subset,Family-narrow independent stress test,Only aromatic/rigid-backbone entries after screening; not a broad diversity source.

@@ -1,0 +1,4 @@
+source,n,n_fibers,axis,rho,rho_ci_low,rho_ci_high,slope_C_per_unit_axis
+Stage 10: tsaicying novel Tg subset,739,64,MSBP density = -rot/heavy,0.7447871523592736,0.7045042395510015,0.7842879186843137,411.42090326778094
+Stage 11: NeurIPS released Tg-known test,261,36,MSBP density = -rot/heavy,0.5509848772226069,0.45791367169568364,0.6351335560732186,407.06173984339443
+Stage 13: Leeds PAEK novel subset,78,7,MSBP density = -rot/heavy,0.8284126078896,0.7361986949148877,0.8974733129350047,1252.166787378011

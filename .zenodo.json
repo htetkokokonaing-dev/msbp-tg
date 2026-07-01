@@ -1,0 +1,26 @@
+{
+  "title": "Mobility Suppression Boundary Principle for Polymer Glass Transition Temperature",
+  "upload_type": "software",
+  "description": "Public-safe code, manuscript, figures, tables, and reproducibility package for MSBP-Tg. MSBP density is exactly -rotatable_bonds/heavy_atoms; the contribution is boundary-coordinate framing and within-fiber validation, not descriptor invention. Raw and row-level third-party SMILES/Tg data are not redistributed.",
+  "creators": [
+    {
+      "name": "Naing, Htet Ko Ko",
+      "orcid": "0009-0000-6140-0495",
+      "affiliation": "Independent Researcher"
+    }
+  ],
+  "license": "mit",
+  "keywords": [
+    "polymer",
+    "glass transition temperature",
+    "Tg",
+    "mobility suppression",
+    "boundary principle",
+    "polymer informatics",
+    "reproducibility"
+  ],
+  "access_right": "open",
+  "related_identifiers": [],
+  "notes": "Preprint software-release metadata. The MIT license covers original code and documentation only; third-party data retain their original terms and are not redistributed. Add GitHub release URL and Zenodo DOI after the first public release; related_identifiers is intentionally empty until persistent identifiers exist.",
+  "language": "eng"
+}

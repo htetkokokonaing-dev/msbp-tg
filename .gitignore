@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+.DS_Store
+.ipynb_checkpoints/
+*.log
+*.zip
+build/
+dist/
+*.egg-info/
+data/external/*
+data/raw_placeholder/*
+data/processed/*.csv
+!data/external/README.md
+!data/raw_placeholder/README.md
+!data/processed/README_processed.md

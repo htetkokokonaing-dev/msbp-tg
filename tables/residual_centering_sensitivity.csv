@@ -1,0 +1,7 @@
+source,residual_center,n,n_fibers,spearman_rho,strong_quartile_sign_accuracy,entropy_gain_nats,note
+Stage 10: tsaicying novel Tg subset,mean,739,64,0.7447871523592735,0.9029649595687331,0.15709047840976043,main public-code protocol
+Stage 10: tsaicying novel Tg subset,median,739,64,0.7438369956245499,0.9100817438692098,0.15709047840976043,sensitivity check only
+Stage 11: NeurIPS released Tg-known test,mean,261,36,0.5509848772226069,0.7803030303030303,0.06014939234295369,main public-code protocol
+Stage 11: NeurIPS released Tg-known test,median,261,36,0.5311708948106064,0.7421875,0.06014939234295369,sensitivity check only
+Stage 13: Leeds PAEK novel subset,mean,78,7,0.8284126078895999,0.95,0.27072680542567285,main public-code protocol
+Stage 13: Leeds PAEK novel subset,median,78,7,0.8322418296623647,0.9487179487179487,0.27072680542567285,sensitivity check only

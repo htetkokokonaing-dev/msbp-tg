@@ -1,0 +1,4 @@
+source_family,stage,counted_rows,axis,spearman_rho,sign_accuracy,entropy_excess_nats,cv_r2_gain_vs_family_size,interpretation
+tsaicying polymer Tg de-overlapped novel subset,10,739,MSBP density = -rot/heavy,0.7448,0.9030,+0.1519,+0.2975,Strong post-lock source-family support after canonical-overlap removal.
+NeurIPS released Tg-known public/private combined subset,11,261,MSBP density = -rot/heavy,0.5510,0.7803,+0.0441,+0.2961,"Second post-lock, leak-screened support; directional association remains positive with weaker entropy separation."
+Leeds PAEK Tg novel subset,13,78,MSBP density = -rot/heavy,0.8284,0.9500,+0.2208,+0.6450,Third source-family support; normalized axis is strongest in this family-narrow high-aromatic domain.

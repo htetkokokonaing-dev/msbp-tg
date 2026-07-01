@@ -1,0 +1,7 @@
+Source,Comparator,Delta_abs_rho_MSBP_minus_comparator,CI95,p
+Stage 10 tsaicying,ring density,0.085,"[0.050, 0.120]",<0.001
+Stage 10 tsaicying,aromatic ring density,0.140,"[0.096, 0.188]",<0.001
+Stage 11 NeurIPS,ring density,0.034,"[-0.041, 0.104]",0.341
+Stage 11 NeurIPS,aromatic ring density,0.052,"[-0.026, 0.128]",0.181
+Stage 13 Leeds PAEK,ring density,0.322,"[0.189, 0.474]",<0.001
+Stage 13 Leeds PAEK,aromatic ring density,0.322,"[0.189, 0.474]",<0.001

@@ -1,0 +1,4 @@
+n,n_fibers,axis,target,fiber,spearman_rho,spearman_p,sign_accuracy,entropy_gain_nats,source
+739,64,mobility_suppression_density,Tg_C,visible_dataset_fiber,0.7447871523592735,1.322009053718971e-131,0.9029649595687331,0.15709047840976043,stage10_tsaicying_leak_excluded
+261,36,mobility_suppression_density,Tg,visible_dataset_fiber,0.5509848772226069,3.9945586296885636e-22,0.7803030303030303,0.06014939234295369,stage11_neurips_combined
+78,7,mobility_suppression_density,Tg_value_raw,fiber,0.8284126078895999,8.102366933874014e-21,0.95,0.27072680542567285,stage13_leeds_paek

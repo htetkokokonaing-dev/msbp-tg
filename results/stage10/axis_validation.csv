@@ -1,0 +1,3 @@
+candidate_subset,axis,n,n_fibers,spearman_rho,spearman_p,strong_quartile_sign_accuracy,entropy_gain_nats,shuffle_p95_entropy_gain,entropy_excess_over_shuffle_p95,passes_axis_gate
+polymer_tg_predictor_novel_only,rotatable_count_suppression,739,64,0.7068046314865575,6.688077611389422e-113,0.8903743315508021,0.3507108142291136,0.15583643291873314,0.19487438131038046,True
+polymer_tg_predictor_novel_only,rotatable_density_suppression,739,64,0.7447871523592735,1.322009053718971e-131,0.9029649595687331,0.3671363307390635,0.15647499682633406,0.21066133391272943,True

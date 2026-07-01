@@ -1,0 +1,8 @@
+gate,status,evidence
+G1 source 1 post-lock leak-excluded,pass,Stage 10 tsaicying novel subset n=739
+G2 source 2 post-lock leak-excluded,pass,Stage 11 NeurIPS Tg-known combined n=261
+G3 source 3 post-lock leak-excluded,pass,Stage 13 Leeds PAEK n=78; count rho=0.7061; density rho=0.8284
+G4 source quality,partial,"Leeds is Tg+SMILES polymer repeat-unit source, but family-narrow high-aromatic PAEK domain"
+G5 proxy/offtarget sources,excluded_or_secondary,"ViditAg is monomer-proxy only; RAK2315 is small-molecule Tg, off target"
+G6 formula creep,pass,No new fitted formula; locked mobility suppression count/density axes tested
+G7 public release,not_ready,"Three-source support reached, but requires wording refinement, manual source audit, and public-method writeup"

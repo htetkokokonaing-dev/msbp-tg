@@ -1,0 +1,4 @@
+Source,MSBP_abs_rho,ring_abs_rho,aromatic_abs_rho,hetero_abs_rho,size_abs_rho
+Stage 10 tsaicying,0.745,0.660,0.604,0.043,0.033
+Stage 11 NeurIPS,0.551,0.517,0.499,0.023,0.029
+Stage 13 Leeds PAEK,0.828,0.506,0.506,0.322,0.188

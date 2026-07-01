@@ -1,0 +1,13 @@
+name: msbp-tg
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - rdkit
+  - openpyxl
+  - pyyaml
+  - pytest
