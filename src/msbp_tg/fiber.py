@@ -3,11 +3,25 @@ from __future__ import annotations
 import pandas as pd
 
 def size_bin(series: pd.Series, q: int = 5) -> pd.Series:
-    """Quantile size bin with duplicate-edge handling."""
+    """Quantile size bin with duplicate-edge handling.
+
+    If all values are identical, pandas.qcut can return all-NaN bins when
+    duplicate quantile edges are dropped. For visible-fiber construction, that
+    degenerate but valid case is assigned to size bin 0.
+    """
+    values = pd.to_numeric(series, errors="coerce")
     try:
-        return pd.qcut(pd.to_numeric(series, errors="coerce"), q=q, labels=False, duplicates="drop")
+        bins = pd.qcut(values, q=q, labels=False, duplicates="drop")
+        bins = pd.Series(bins, index=series.index)
     except ValueError:
-        return pd.Series([0] * len(series), index=series.index)
+        bins = pd.Series([0] * len(series), index=series.index)
+
+    if bins.isna().all():
+        bins = pd.Series([0] * len(series), index=series.index)
+    else:
+        bins = bins.fillna(0)
+
+    return bins.astype(int)
 
 def simple_family_from_features(df: pd.DataFrame) -> pd.Series:
     """A simple chemistry-family heuristic for raw SMILES validation.
