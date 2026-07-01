@@ -1,0 +1,10 @@
+Public-safe reproducibility package for the MSBP-Tg polymer glass-transition analysis.
+
+This release includes:
+- Manuscript and supplementary methods
+- Public-safe analysis code
+- Tests and CI workflow
+- Aggregate validation summaries
+- Figures and derived public-safe tables
+
+Raw third-party datasets and row-level third-party-derived SMILES/Tg records are not redistributed.
