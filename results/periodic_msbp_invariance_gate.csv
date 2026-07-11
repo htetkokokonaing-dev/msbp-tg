@@ -1,0 +1,4 @@
+smiles,heavy_atoms,naive_rotatable_bonds,naive_msbp_density,primitive_period_heavy_atoms,periodic_rotatable_bonds_per_period,periodic_msbp_density,representation_class,notes
+*CC*,2,1,-0.5,2,1,-0.5,*CC*,"prototype periodic two-terminal quotient; valid for the current invariance gate, not a full polymer graph canonizer"
+*CCCC*,4,3,-0.75,2,1,-0.5,*CC*,"prototype periodic two-terminal quotient; valid for the current invariance gate, not a full polymer graph canonizer"
+*CCCCCC*,6,5,-0.8333333333333334,2,1,-0.5,*CC*,"prototype periodic two-terminal quotient; valid for the current invariance gate, not a full polymer graph canonizer"
