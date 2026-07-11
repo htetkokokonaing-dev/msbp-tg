@@ -1,0 +1,2 @@
+path,exists,n_rows,has_psmiles,has_tg,n_nonempty_psmiles,n_numeric_tg,n_sources,n_polymer_classes,n_supported_by_current_pmsbp,n_unsupported_by_current_pmsbp,support_fraction,verdict
+data/open_row_level/LAMALAB_CURATED_Tg_structured_polymerclass.csv,True,7367,True,True,7367,7367,6,22,161,7206,0.021854214741414416,OPEN_DATASET_FOUND_PMSBP_PROTOTYPE_COVERAGE_LOW

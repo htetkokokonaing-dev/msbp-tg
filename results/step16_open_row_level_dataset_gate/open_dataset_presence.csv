@@ -1,0 +1,4 @@
+dataset,path,exists,size_bytes,status
+PolyMetriX curated Tg,data/open_row_level/LAMALAB_CURATED_Tg_structured_polymerclass.csv,True,5296460,PRESENT_FILE
+Figshare BigSMILES Tg zip,data/open_row_level/figshare_bigsmiles_tg/with_Tg.zip,True,0,EMPTY_DOWNLOAD
+polyVERSE archive directory,data/open_row_level/polyverse,True,8853079,PRESENT_DIRECTORY
