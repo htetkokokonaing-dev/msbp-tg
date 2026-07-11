@@ -1,0 +1,2 @@
+path,exists,n_rows,n_supported,n_unsupported,support_fraction,n_supported_numeric_tg,spearman_rho_supported_all,parser_mode
+data/open_row_level/LAMALAB_CURATED_Tg_structured_polymerclass.csv,True,7367,7367,0,1.0,7367,-0.5315390888078491,psmiles_token_sequence
