@@ -1,0 +1,3 @@
+bootstrap_type,n_bootstrap,overall_rho_ci_low,overall_rho_ci_high,within_class_residual_rho_ci_low,within_class_residual_rho_ci_high
+row_bootstrap,200,-0.5451721563723844,-0.51508964819938,-0.29035896107932413,-0.24387578142253344
+polymer_class_cluster_bootstrap,200,-0.5712858873593276,-0.24426871516823545,-0.40481064881677997,-0.12300542891000447

@@ -1,0 +1,2 @@
+n_rows,n_polymer_classes,n_sources,n_representation_classes,overall_spearman_rho,within_class_median_residual_spearman_rho,within_class_mean_residual_spearman_rho,pmsbp_min,pmsbp_max,tg_k_min,tg_k_max
+7367,22,6,6176,-0.5315390888078491,-0.269476413921309,-0.2649844094957029,-1.0,-0.5,134.15,768.15
