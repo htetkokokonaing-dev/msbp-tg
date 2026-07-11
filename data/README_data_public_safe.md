@@ -1,19 +1,33 @@
-# Public-safe data note
+# Public-safe data policy
 
-This public-safe package does not redistribute raw third-party datasets or processed feature tables derived from them. Use `data/external_sources.md` and the scripts in `scripts/` to re-acquire permitted source files and regenerate validation feature tables locally.
+This repository is a public-safe journal-submission and reproducibility package. It does not redistribute raw third-party datasets or row-level third-party-derived structural/property tables.
 
-Current source roles are:
+The public release includes:
 
-- broad leak-excluded Tg source: `tsaicying/polymer-tg-predictor`;
-- benchmark-style check: NeurIPS / Open Polymer Prediction 2025 released Tg-known test data;
-- family-narrow stress test: Leeds PAEK source family associated with Brierley-Croft et al. and University of Leeds Research Data DOI 10.5518/1596.
+- source provenance documentation;
+- license and redistribution notes;
+- aggregate validation summaries;
+- source-role notes;
+- figures;
+- tests;
+- reproducibility scripts;
+- manuscript and supplementary files.
 
-Before public release, verify every data source license, access date, and citation requirement.
+The public release intentionally excludes:
+
+- raw third-party source tables;
+- locally prepared feature tables generated from third-party sources;
+- row-level structural/property records;
+- private intermediate files and development paths.
+
+## Source register
+
+Use `data/external_sources.csv` as the machine-readable source register and `data/external_sources.md` as the human-readable source register.
+
+## Local reproduction
+
+To reproduce the source-family validation, users must obtain external datasets directly from the original providers and follow the license or access terms of those providers. Locally prepared feature tables should be placed under `data/processed/` with the names listed in `data/processed/README.md`.
 
 ## Manifest note
 
-`data/manifest.csv` records the public repository contents at package-build time. The manifest may intentionally exclude itself or use a post-generation audit note, because hashing a manifest that includes its own final hash is self-referential.
-
-##  data-rights note
-
-This public package does not redistribute raw third-party datasets or row-level third-party-derived SMILES/Tg tables. Validation evidence is provided as aggregate statistics and source-role summaries. Full reproduction requires independently obtaining external datasets under their own licenses and terms. See `data/license_audit.md`.
+`data/manifest.csv` records public repository contents at package-build time. It is a release-integrity aid, not a raw-data inventory. It may intentionally exclude itself or use a post-generation audit note because hashing a manifest that includes its own final hash is self-referential.

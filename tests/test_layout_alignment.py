@@ -23,10 +23,11 @@ def test_main_title_author_are_not_justified():
     pars = paragraphs(ROOT / 'manuscript' / 'MSBP_Tg_Journal_Manuscript.docx')
     display = pars[:4]
     assert display[0][0].startswith('Mobility Suppression Boundary Principle')
-    assert display[1][0].startswith('A within-fiber')
-    assert display[2][0].startswith('Htet Ko Ko Naing')
-    assert display[3][0].startswith('Preprint manuscript')
-    assert [val for _, val in display] == ['left', 'left', 'left', 'center']
+    assert display[1][0].startswith('Htet Ko Ko Naing')
+    assert display[2][0].startswith('Journal submission version')
+    assert display[3][0].startswith('Abstract')
+    # Pandoc may omit explicit alignment tags for default-left paragraphs.
+    assert all(val in {None, 'left', 'center'} for _, val in display)
 
 
 def test_supplement_title_author_are_not_justified():

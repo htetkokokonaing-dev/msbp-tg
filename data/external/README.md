@@ -1,11 +1,5 @@
-# External raw data location
+# External local data directory
 
-Place downloaded raw source files here when reproducing the pipeline locally. Raw third-party data are not included in the clean repository unless redistribution permissions are confirmed.
+This directory is reserved for private local reproduction. It is intentionally empty in the public release.
 
-Recommended filenames:
-
-- `Tg_dataset_tsaicying.csv`
-- `neurips_open_polymer_2025_test/public.csv`
-- `neurips_open_polymer_2025_test/private.csv`
-- `Leeds_PAEK_Tg_Supporting_data_file.xlsx`
-- `Leeds_PAEK_Tg_Data_references.pdf`
+Use it only for user-acquired external files that are permitted for local analysis. Do not commit raw external source files or row-level third-party-derived structural/property files to the public repository unless the source license explicitly permits redistribution.

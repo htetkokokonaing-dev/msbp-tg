@@ -1,0 +1,22 @@
+Dear Editors,
+
+I submit the manuscript entitled "Mobility Suppression Boundary Principle for Polymer Glass-Transition Temperature" for consideration as an original research article. The manuscript presents an interpretable polymer-informatics analysis of glass-transition temperature boundary displacement using a public-safe reproducibility workflow. The study evaluates whether suppression of normalized local rotatable mobility, expressed as MSBP density, is associated with upward Tg boundary displacement within comparable chemistry-size fibers.
+
+The contribution is not presented as a universal Tg law or as a replacement for experimental measurement. Instead, it provides a falsification-controlled and reproducible boundary-coordinate analysis, supported by source-family checks, bootstrap summaries, paired descriptor comparisons, shuffle controls, contradiction taxonomy, and a public GitHub/Zenodo reproducibility package.
+
+A preprint version is available at ChemRxiv:
+https://doi.org/10.26434/chemrxiv.15005629/v1
+
+The public-safe reproducibility package is archived at Zenodo:
+https://doi.org/10.5281/zenodo.21100020
+
+The code repository is available at:
+https://github.com/htetkokokonaing-dev/msbp-tg
+
+Thank you for considering this manuscript.
+
+Sincerely,
+
+Htet Ko Ko Naing
+Independent Researcher
+ORCID: 0009-0000-6140-0495

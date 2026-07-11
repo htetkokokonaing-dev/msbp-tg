@@ -1,7 +1,7 @@
 {
-  "title": "Mobility Suppression Boundary Principle for Polymer Glass Transition Temperature",
+  "title": "Mobility Suppression Boundary Principle for Polymer Glass-Transition Temperature: A Public-Safe Cheminformatics Validation Study",
   "upload_type": "software",
-  "description": "Public-safe code, manuscript, figures, tables, and reproducibility package for MSBP-Tg. MSBP density is exactly -rotatable_bonds/heavy_atoms; the contribution is boundary-coordinate framing and within-fiber validation, not descriptor invention. Raw and row-level third-party SMILES/Tg data are not redistributed.",
+  "description": "Public-safe code, manuscript, figures, aggregate tables, tests, and reproducibility package for MSBP-Tg, a cheminformatics validation study of a mobility-suppression coordinate for polymer glass-transition temperature. MSBP density is defined as -NumRotatableBonds/heavy_atoms. The contribution is within-fiber descriptor-coordinate validation and public-safe reproducibility, not descriptor invention, not a universal Tg law, and not a replacement for experimental measurement. Raw and row-level third-party SMILES/Tg records are not redistributed.",
   "creators": [
     {
       "name": "Naing, Htet Ko Ko",
@@ -14,25 +14,33 @@
     "polymer",
     "glass transition temperature",
     "Tg",
-    "mobility suppression",
-    "boundary principle",
+    "cheminformatics",
     "polymer informatics",
-    "reproducibility"
+    "molecular descriptors",
+    "reproducibility",
+    "public-safe data"
   ],
   "access_right": "open",
   "related_identifiers": [
     {
-      "identifier": "https://github.com/htetkokokonaing-dev/msbp-tg",
+      "identifier": "https://doi.org/10.26434/chemrxiv.15005629/v1",
       "relation": "isSupplementTo",
-      "scheme": "url"
+      "scheme": "url",
+      "resource_type": "publication-preprint"
     },
     {
-      "identifier": "https://github.com/htetkokokonaing-dev/msbp-tg/releases/tag/v1.0.1-preprint",
+      "identifier": "https://github.com/htetkokokonaing-dev/msbp-tg",
       "relation": "isSupplementTo",
-      "scheme": "url"
+      "scheme": "url",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "https://doi.org/10.5281/zenodo.21100020",
+      "relation": "isIdenticalTo",
+      "scheme": "url",
+      "resource_type": "software"
     }
   ],
-  "notes": "Preprint software-release metadata. The MIT license covers original code and documentation only; third-party data retain their original terms and are not redistributed. Archived release DOI: https://doi.org/10.5281/zenodo.21100020.",
-  "language": "eng",
-  "version": "v1.0.1-preprint"
+  "notes": "Journal-submission-ready public-safe software/archive package corresponding to the ChemRxiv preprint DOI https://doi.org/10.26434/chemrxiv.15005629/v1. The MIT license covers original code and documentation only; third-party data retain their original source terms and are not redistributed.",
+  "language": "eng"
 }

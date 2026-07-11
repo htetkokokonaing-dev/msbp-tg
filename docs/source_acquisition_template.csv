@@ -1,0 +1,4 @@
+source_id,provider,url_or_doi,access_date,license_or_terms_checked,local_private_path,local_feature_table,notes
+D1_tsaicying_polymer_tg_repository,tsaicying/polymer-tg-predictor,https://github.com/tsaicying/polymer-tg-predictor,YYYY-MM-DD,record terms here,/private/path/source_file.csv,data/processed/stage10_tsaicying_leak_excluded_novel_features.csv,do not commit raw rows
+D2_neurips_open_polymer_prediction_2025,Kaggle NeurIPS Open Polymer Prediction 2025,https://www.kaggle.com/competitions/neurips-open-polymer-prediction-2025/data,YYYY-MM-DD,record terms here,/private/path/source_file.csv,data/processed/stage11_neurips_public_private_tg_known_novel_features.csv,do not commit raw rows
+D3_leeds_paek_source_family,University of Leeds Research Data,https://doi.org/10.5518/1596,YYYY-MM-DD,record terms here,/private/path/source_file.csv,data/processed/stage13_leeds_paek_novel_features.csv,do not commit raw rows

@@ -1,6 +1,6 @@
 # Reproducibility Guide - MSBP-Tg 
 
-This repository is a public-safe public-safe preprint package. It contains code, aggregate validation outputs, manuscript files, figures, and documentation. It does not redistribute raw third-party datasets or row-level third-party-derived SMILES/Tg tables.
+This repository is a public-safe journal-submission package. It contains code, aggregate validation outputs, manuscript files, figures, and documentation. It does not redistribute raw third-party datasets or row-level third-party-derived SMILES/Tg tables.
 
 ## 1. Environment setup
 
@@ -22,6 +22,29 @@ pytest: tests pass
 public release safety check: PASS
 public-safe repo check: PASS
 ```
+
+
+
+## 1.1 One-command public-safe audit
+
+From the repository root, run:
+
+```bash
+bash reproduce.sh
+```
+
+The audit performs editable local installation, runs the complete public test suite, runs public-release safety checks, runs the public-safe repository/data-rights check, and executes the three-source summary script in safe public mode.
+
+Expected public-safe audit result:
+
+```text
+42 tests passed
+PUBLIC RELEASE SAFETY CHECK: PASS
+Public-safe check passed.
+Source-family summary script: controlled skip when private feature tables are absent; locked aggregate summaries are not overwritten.
+```
+
+See `docs/JOURNAL_REPRODUCIBILITY_AUDIT.md` and `docs/STEP7_CODE_REPRODUCIBILITY_AUDIT_REPORT.md` for the recorded Step 7 audit.
 
 ## 2. Raw data policy
 
@@ -48,7 +71,20 @@ license_or_terms_checked:
 notes:
 ```
 
-The release includes `data/license_audit.md` and `data/external_sources.md` for source-role and redistribution notes.
+The release includes `data/external_sources.csv`, `data/external_sources.md`, `data/license_audit.md`, `data/raw/README.md`, and `data/processed/README.md` for source-role, local-reproduction, and redistribution notes.
+
+
+## 3.1 Expected local feature-table paths
+
+After independent source acquisition and private preprocessing, place local feature tables at these paths if you want to rerun the three-source validation summary:
+
+```text
+ data/processed/stage10_tsaicying_leak_excluded_novel_features.csv
+ data/processed/stage11_neurips_public_private_tg_known_novel_features.csv
+ data/processed/stage13_leeds_paek_novel_features.csv
+```
+
+These files are intentionally absent from the public release because they may contain row-level third-party-derived structural/property records. The public release provides aggregate validation outputs instead.
 
 ## 4. Feature extraction from user-supplied SMILES
 

@@ -43,7 +43,7 @@ def test_manuscript_uses_conservative_support_wording_and_preprint_title_line() 
         assert "Three post-lock source-family checks are consistent with this framing" in text
         assert "Three post-lock source-family checks support this framing" not in text
         assert "Because MSBP density is non-positive for ordinary repeat units" in text
-    assert "Preprint manuscript with public-safe reproducibility package." in dx
+    assert re.search(r"Journal\s+submission\s+version\s+after\s+ChemRxiv\s+preprint\s+posting", dx)
     assert "Release-compliance candidate manuscript" not in dx
 
 

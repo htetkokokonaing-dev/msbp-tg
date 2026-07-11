@@ -1,23 +1,33 @@
 cff-version: 1.2.0
-message: "If you use this repository, please cite the archived Zenodo release."
+message: "If you use this repository, please cite both the Zenodo software archive and the ChemRxiv preprint."
 type: software
-title: "Mobility Suppression Boundary Principle for Polymer Glass Transition Temperature"
+title: "Mobility Suppression Boundary Principle for Polymer Glass-Transition Temperature: A Public-Safe Cheminformatics Validation Study"
 authors:
   - family-names: "Naing"
     given-names: "Htet Ko Ko"
     orcid: "https://orcid.org/0009-0000-6140-0495"
-version: "v1.0.1-preprint"
-date-released: "2026-07-01"
+date-released: "2026-07-11"
 license: "MIT"
 doi: "10.5281/zenodo.21100020"
-url: "https://github.com/htetkokokonaing-dev/msbp-tg"
+url: "https://doi.org/10.5281/zenodo.21100020"
 repository-code: "https://github.com/htetkokokonaing-dev/msbp-tg"
-abstract: "Public-safe reproducibility package for MSBP-Tg, a boundary-level explanation of polymer glass-transition temperature variation within comparable chemistry-size fibers. MSBP density is exactly the sign reversal of rotatable-bond density. Raw and row-level third-party SMILES/Tg data are not redistributed."
+abstract: "Public-safe software and reproducibility package for a cheminformatics validation study of an interpretable mobility-suppression coordinate for polymer glass-transition temperature. MSBP density is defined as -NumRotatableBonds/heavy_atoms. Raw and row-level third-party SMILES/Tg records are not redistributed."
 keywords:
   - polymer
   - glass transition temperature
   - Tg
-  - mobility suppression
-  - boundary principle
+  - cheminformatics
   - polymer informatics
+  - molecular descriptors
   - reproducibility
+  - public-safe data
+preferred-citation:
+  type: article
+  title: "Mobility Suppression Boundary Principle for Polymer Glass-Transition Temperature: A Public-Safe Cheminformatics Validation Study"
+  authors:
+    - family-names: "Naing"
+      given-names: "Htet Ko Ko"
+      orcid: "https://orcid.org/0009-0000-6140-0495"
+  year: 2026
+  doi: "10.26434/chemrxiv.15005629/v1"
+  url: "https://doi.org/10.26434/chemrxiv.15005629/v1"

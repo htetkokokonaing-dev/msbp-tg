@@ -1,15 +1,22 @@
 # Data license and redistribution audit
 
-This repository is designed as a public-safe reproducibility package. Raw third-party datasets are not bundled. Row-level third-party-derived SMILES/Tg records are not redistributed in CSV form unless permission is explicit.
+This repository is designed as a public-safe journal-submission package. Raw third-party datasets are not bundled. Row-level third-party-derived structural/property records are not redistributed unless permission is explicit.
 
-## Source-family handling
+## Public handling by source family
 
-| Source family | Role in manuscript | Bundled raw rows? | Bundled row-level SMILES/Tg? | Public release handling |
+| Source family | Role in manuscript | Bundled raw rows? | Bundled row-level structural/property table? | Public release handling |
 |---|---|---:|---:|---|
-| tsaicying polymer Tg repository | Broad leak-excluded Tg source | No | No | Cite source and provide acquisition instructions; aggregate validation summaries only. |
-| NeurIPS/Open Polymer Prediction released Tg-known subset | Benchmark-style directional check | No | No | Cite source and provide acquisition instructions; aggregate validation summaries only. |
-| Leeds PAEK / University of Leeds Research Data | Family-narrow PAEK stress test | No | No | Cite publication and data archive; aggregate validation summaries only. |
+| tsaicying polymer Tg repository | Broad leak-excluded source-family check | No | No | Cite source, document access, provide aggregate validation summaries only. |
+| NeurIPS/Open Polymer Prediction released known-label subset | Benchmark-style directional check | No | No | Cite source/data page, document access, provide aggregate validation summaries only. |
+| Leeds PAEK / University of Leeds Research Data | Family-narrow PAEK stress test | No | No | Cite publication/data archive, provide aggregate validation summaries only. |
 | Screening-only sources | Overlap/source-screening context | No | No | Not counted as independent validation unless documented; no raw redistribution. |
+
+## Source register
+
+The source register is provided in two forms:
+
+- `data/external_sources.csv` for machine-readable source metadata;
+- `data/external_sources.md` for human-readable source notes and reproduction boundaries.
 
 ## Figure policy
 
@@ -17,8 +24,8 @@ Figure 4 uses synthetic illustrative motifs drawn with RDKit. These motifs are s
 
 ## Reviewer reproduction note
 
-Full reruns require the user to obtain each external dataset independently and place it under the paths described in `data/README_data_public_safe.md` and `docs/REPRODUCIBILITY.md` or the future supplementary methods. Scripts intentionally avoid overwriting locked aggregate summaries when external data are absent.
+Full source reruns require readers to obtain each external dataset independently and prepare local feature tables under `data/processed/` as documented in `data/processed/README.md`. The public scripts intentionally avoid overwriting locked aggregate summaries when external data are absent.
 
 ## Public-safe checks
 
-The release checker scans for cache files, private paths, bundled raw-data folders, and CSV headers that combine structural identifiers such as SMILES with Tg-like target fields. Such files are blocked from public release unless a future explicit license audit permits redistribution.
+The public-safe checker scans for cache files, private paths, bundled raw-data folders, and CSV headers that combine structural identifiers with Tg-like target fields. Such files are blocked from public release unless a future explicit license audit permits redistribution.

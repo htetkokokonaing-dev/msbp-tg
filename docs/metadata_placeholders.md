@@ -10,7 +10,7 @@ Current policy:
 - `CITATION.cff` type: `software`
 - `.zenodo.json` license identifier: `mit`
 - `.zenodo.json` language: `eng`
-- `related_identifiers`: updated with the GitHub repository and release URL. Zenodo DOI: https://doi.org/10.5281/zenodo.21100020
+- `related_identifiers`: intentionally empty until the GitHub release URL, Zenodo DOI, and any ChemRxiv DOI exist
 
 After the first public release, update the following in one controlled pass:
 
