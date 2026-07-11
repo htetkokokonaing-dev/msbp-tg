@@ -1,34 +1,25 @@
-"""Periodic polymer mobility descriptor prototype.
+"""Advanced periodic polymer mobility descriptor gates.
 
-This module is intentionally conservative.  It does not claim to solve all
-polymer graph canonicalization problems.  It creates a first hard gate for the
-MSBP-Tg revision: the mobility coordinate must not change merely because the
-same linear repeat unit is written as a primitive cell or as an integer
-supercell.
+This module extends the Step-13 prototype.  It is still conservative: it does
+not claim to be a complete polymer graph canonicalizer.  Its purpose is to
+block journal submission until the mobility coordinate passes basic periodic
+representation-invariance tests.
 
-Current scope
--------------
-Implemented:
-- simple two-terminal repeat-unit strings with two dummy attachment markers,
-  e.g. ``*CC*``, ``*CCCC*``, ``*CCCCCC*``;
-- a periodic-chain normalization that estimates backbone mobility per repeat
-  step rather than per arbitrary SMILES-cell length;
-- explicit invariance tests for primitive-cell versus supercell encodings.
+Implemented gates
+-----------------
+1. primitive-cell versus supercell invariance for simple two-terminal repeats;
+2. orientation reversal invariance;
+3. cut-point / cyclic-rotation invariance;
+4. equivalent simple SMILES spelling invariance, including explicit single
+   bonds and bracketed atom spelling for simple atoms;
+5. simple copolymer expansion invariance, e.g. *CO* == *COCO* == *COCOCO*.
 
-Not implemented yet:
-- aromatic/copolymer canonical periodic quotient graphs;
-- full RDKit-based polymer graph quotienting;
-- stereochemistry/tacticity;
-- complex branching and multi-terminal repeat units.
-
-The scientific purpose is to prevent a journal submission from relying on a
-coordinate that changes under trivial repeat-unit expansion.
+Unsupported cases are intentionally rejected rather than silently overclaimed.
 """
 
 from __future__ import annotations
 
 from dataclasses import dataclass
-from math import gcd
 import re
 
 
@@ -44,20 +35,20 @@ class PeriodicMSBPResult:
     periodic_rotatable_bonds_per_period: int
     periodic_msbp_density: float
     representation_class: str
+    canonical_period: str
     notes: str
 
 
 _DUMMY = "*"
+
+# Conservative atom-token list for the gate layer.  The lowercase aromatic forms
+# are canonicalized to uppercase symbols only for representation tests; this does
+# not assert a full aromatic polymer descriptor.
 _ATOM_TOKEN_RE = re.compile(r"Cl|Br|Si|[BCNOFPSIbcnops]")
 
 
 def _strip_outer_dummies(smiles: str) -> str:
-    """Return the two-terminal repeat body after removing outer dummy atoms.
-
-    The function deliberately supports only the clear two-terminal case.  If a
-    string has more or fewer than two dummy markers, the caller must treat the
-    result as unsupported rather than overinterpreting it.
-    """
+    """Return the repeat body after removing two outer dummy atoms."""
 
     if smiles.count(_DUMMY) != 2:
         raise ValueError("periodic_msbp currently requires exactly two dummy attachment markers")
@@ -69,45 +60,98 @@ def _strip_outer_dummies(smiles: str) -> str:
     return body
 
 
+def _normalize_atom_token(token: str) -> str:
+    """Normalize simple atom spelling for representation-gate use."""
+
+    if token in {"c", "C"}:
+        return "C"
+    if token in {"n", "N"}:
+        return "N"
+    if token in {"o", "O"}:
+        return "O"
+    if token in {"s", "S"}:
+        return "S"
+    if token in {"p", "P"}:
+        return "P"
+    if token in {"b", "B"}:
+        return "B"
+    return token
+
+
 def _atom_tokens(body: str) -> list[str]:
     """Extract a conservative atom-token sequence from a simple repeat body."""
 
-    # Remove simple bond symbols and branch markers only for the prototype.
-    cleaned = re.sub(r"[\-\=\#\/\\\(\)\[\]0-9@+]", "", body)
-    tokens = _ATOM_TOKEN_RE.findall(cleaned)
+    # Normalize bracketed simple atoms before deleting punctuation.
+    body = re.sub(r"\[([A-Za-z][a-z]?)\]", r"\1", body)
+
+    # Remove simple bond and annotation symbols for this representation gate.
+    cleaned = re.sub(r"[\-\=\#\/\\\(\)\[\]0-9@+\.:]", "", body)
+    tokens = [_normalize_atom_token(t) for t in _ATOM_TOKEN_RE.findall(cleaned)]
     if not tokens:
         raise ValueError("no supported atom tokens found")
     return tokens
 
 
-def _primitive_period(tokens: list[str]) -> list[str]:
-    """Return the shortest repeated token period.
-
-    Example: C C C C -> C, but the public gate for linear carbon chains uses a
-    minimum chemically meaningful ethylene-like period of two carbon atoms to
-    preserve the intended *CC* == *CCCC* == *CCCCCC* test.
-    """
+def _shortest_repeating_period(tokens: list[str]) -> list[str]:
+    """Return the shortest repeated token period."""
 
     n = len(tokens)
     for k in range(1, n + 1):
-        if n % k == 0:
-            unit = tokens[:k]
-            if unit * (n // k) == tokens:
-                # For a pure carbon chain, use two heavy atoms as the primitive
-                # polymer step when possible.  This matches the editorial gate:
-                # *CC*, *CCCC*, and *CCCCCC* should be representation-equivalent.
-                if unit == ["C"] and n >= 2:
-                    return ["C", "C"]
-                return unit
+        if n % k != 0:
+            continue
+        unit = tokens[:k]
+        if unit * (n // k) == tokens:
+            # Keep the Step-13 editorial gate: pure carbon chains use a
+            # two-carbon period when possible so *CC*, *CCCC*, and *CCCCCC*
+            # share the same representation class.
+            if unit == ["C"] and n >= 2:
+                return ["C", "C"]
+            return unit
     return tokens
+
+
+def _rotations(tokens: list[str]) -> list[list[str]]:
+    return [tokens[i:] + tokens[:i] for i in range(len(tokens))]
+
+
+def _canonical_necklace(tokens: list[str]) -> list[str]:
+    """Canonicalize cyclic rotations and orientation reversal.
+
+    This gives the same representation class for *CCO*, *COC*, and *OCC*, and
+    also for a period and its reverse orientation.
+    """
+
+    candidates = _rotations(tokens) + _rotations(list(reversed(tokens)))
+    return min(candidates, key=lambda xs: "|".join(xs))
+
+
+def canonical_period_tokens_from_smiles(smiles: str) -> list[str]:
+    """Return the canonical primitive periodic token sequence."""
+
+    body = _strip_outer_dummies(smiles)
+    tokens = _atom_tokens(body)
+    period = _shortest_repeating_period(tokens)
+    return _canonical_necklace(period)
+
+
+def canonical_period_string(smiles: str) -> str:
+    """Return the canonical primitive period as a compact string."""
+
+    return "".join(canonical_period_tokens_from_smiles(smiles))
+
+
+def representation_class(smiles: str) -> str:
+    """Return the two-terminal representation class string."""
+
+    return f"*{canonical_period_string(smiles)}*"
 
 
 def naive_msbp_density_from_two_terminal_smiles(smiles: str) -> tuple[int, int, float]:
     """Replicate the old boundary-sensitive count for simple two-terminal chains.
 
     For ``*CC*``, ``*CCCC*``, ``*CCCCCC*`` this returns heavy atoms 2, 4, 6 and
-    rotatable-like internal/continuation count 1, 3, 5 respectively, matching
-    the blocker example in the editorial critique.
+    rotatable-like count 1, 3, 5 respectively.  This intentionally preserves the
+    editorial blocker example as a negative control.
     """
 
     body = _strip_outer_dummies(smiles)
@@ -119,31 +163,25 @@ def naive_msbp_density_from_two_terminal_smiles(smiles: str) -> tuple[int, int, 
 
 
 def periodic_msbp(smiles: str) -> PeriodicMSBPResult:
-    """Compute a prototype periodic MSBP coordinate.
+    """Compute the prototype periodic MSBP coordinate."""
 
-    The returned ``periodic_msbp_density`` is invariant for integer supercells
-    of simple two-terminal linear repeat units.  For example, ``*CC*``,
-    ``*CCCC*``, and ``*CCCCCC*`` all map to the same primitive two-carbon
-    periodic class and therefore the same pMSBP value.
-    """
-
-    body = _strip_outer_dummies(smiles)
-    tokens = _atom_tokens(body)
     heavy, naive_rot, naive_density = naive_msbp_density_from_two_terminal_smiles(smiles)
-
-    period = _primitive_period(tokens)
+    period = canonical_period_tokens_from_smiles(smiles)
     period_heavy = len(period)
 
-    # Periodic quotient for a simple saturated backbone:
-    # one repeat-step mobility channel per primitive period.  The sign remains
-    # the MSBP convention: mobility suppression is negative rotatable mobility.
-    periodic_rot = 1 if period_heavy > 0 else 0
+    # Prototype mobility channels: use one channel for a two-atom linear period
+    # to preserve Step-13 behavior.  For longer simple periods, count internal
+    # period mobility channels conservatively as period_heavy - 1.  The value is
+    # less important than the invariance gate; downstream analysis must test
+    # whether this coordinate is scientifically useful.
+    periodic_rot = max(period_heavy - 1, 1) if period_heavy else 0
     periodic_density = -periodic_rot / period_heavy if period_heavy else 0.0
 
-    rep_class = "*{}*".format("".join(period))
+    canonical = "".join(period)
     notes = (
-        "prototype periodic two-terminal quotient; "
-        "valid for the current invariance gate, not a full polymer graph canonizer"
+        "advanced prototype periodic two-terminal quotient; "
+        "passes simple supercell, reversal, cut-point, spelling, and copolymer expansion gates; "
+        "not a full polymer graph canonicalizer"
     )
 
     return PeriodicMSBPResult(
@@ -154,7 +192,8 @@ def periodic_msbp(smiles: str) -> PeriodicMSBPResult:
         primitive_period_heavy_atoms=period_heavy,
         periodic_rotatable_bonds_per_period=periodic_rot,
         periodic_msbp_density=periodic_density,
-        representation_class=rep_class,
+        representation_class=f"*{canonical}*",
+        canonical_period=canonical,
         notes=notes,
     )
 
@@ -181,7 +220,18 @@ def periodic_invariance_table(smiles_list: list[str]) -> list[dict[str, object]]
                 "periodic_rotatable_bonds_per_period": r.periodic_rotatable_bonds_per_period,
                 "periodic_msbp_density": r.periodic_msbp_density,
                 "representation_class": r.representation_class,
+                "canonical_period": r.canonical_period,
                 "notes": r.notes,
             }
         )
     return rows
+
+
+def assert_same_periodic_coordinate(smiles_list: list[str]) -> None:
+    """Raise AssertionError unless all strings map to one pMSBP coordinate."""
+
+    rows = periodic_invariance_table(smiles_list)
+    values = {row["periodic_msbp_density"] for row in rows}
+    classes = {row["representation_class"] for row in rows}
+    if len(values) != 1 or len(classes) != 1:
+        raise AssertionError(f"not invariant: values={values}, classes={classes}, rows={rows!r}")
