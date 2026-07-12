@@ -15,3 +15,6 @@ data/processed/*.csv
 !data/external/README.md
 !data/raw_placeholder/README.md
 !data/processed/README_processed.md
+
+# Local downloaded open row-level datasets
+/data/open_row_level/
