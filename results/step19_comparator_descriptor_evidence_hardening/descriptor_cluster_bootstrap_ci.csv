@@ -1,0 +1,12 @@
+descriptor,bootstrap_type,n_bootstrap,within_class_residual_rho_ci_low,within_class_residual_rho_ci_high,n_valid_bootstrap
+pmsbp_density,polymer_class_cluster_bootstrap,200,-0.388772263808535,-0.12482203937073909,200
+num_rotatable_bonds,polymer_class_cluster_bootstrap,200,-0.39302398175177244,-0.22493715336027598,200
+num_rings,polymer_class_cluster_bootstrap,200,0.36476432148334326,0.7070868310319428,200
+num_aromatic_rings,polymer_class_cluster_bootstrap,200,0.3281483063329318,0.6861282097998382,200
+molecular_weight,polymer_class_cluster_bootstrap,200,0.11539197505219975,0.373455765647226,200
+heteroatom_density,polymer_class_cluster_bootstrap,200,-0.39181311580757094,-0.10901386951619345,200
+topological_surface_area,polymer_class_cluster_bootstrap,200,0.018815072734142235,0.2395066466010095,200
+num_hbond_acceptors,polymer_class_cluster_bootstrap,200,-0.03784506780446971,0.19127338128762336,200
+num_hbond_donors,polymer_class_cluster_bootstrap,200,0.05807573401418153,0.20398351235754733,200
+rotatable_per_mw,polymer_class_cluster_bootstrap,200,-0.7548876019730133,-0.6055084892721683,200
+negative_rotatable_per_mw,polymer_class_cluster_bootstrap,200,0.6163456313950465,0.7587889311394445,200
