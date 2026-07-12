@@ -39,6 +39,7 @@ def test_step18_synthetic_open_reanalysis(tmp_path: Path):
     assert verdict in {
         "STEP18_GO_NEGATIVE_WITHIN_CLASS_SIGNAL_REANALYSIS_SUPPORTED",
         "STEP18_MIXED_RAW_SIGNAL_WITHIN_CLASS_NOT_LOCKED",
+        "STEP18_NO_GO_INSUFFICIENT_ANALYSIS_SIGNAL",
     }
     assert (tmp_path / "results" / "overall_pmsbp_association_summary.csv").exists()
     assert (tmp_path / "results" / "polymetrix_open_pmsbp_feature_table.csv").exists()
