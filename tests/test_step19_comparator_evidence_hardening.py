@@ -8,9 +8,15 @@ def test_spearman_negative():
 
 
 def test_linear_r2_simple():
-    rows=[{'y':1.0,'x':1.0},{'y':2.0,'x':2.0},{'y':3.0,'x':3.0},{'y':4.0,'x':4.0}]
-    r2,n=linear_r2(rows,['x'], yname='y')
-    assert n == 4
+    rows = [
+        {"y": 1.0, "x": 1.0},
+        {"y": 2.0, "x": 2.0},
+        {"y": 3.0, "x": 3.0},
+        {"y": 4.0, "x": 4.0},
+        {"y": 5.0, "x": 5.0},
+    ]
+    r2, n = linear_r2(rows, ["x"], yname="y")
+    assert n == 5
     assert r2 is not None and r2 > 0.99
 
 
